@@ -1,0 +1,138 @@
+/* style.css */
+/* Temel düzen */
+:root{
+  --primary:#0B3F6A;
+  --primary-700:#125a94;
+  --card-bg: #ffffff;
+  --muted:#6b7280;
+  --glass: rgba(255,255,255,0.06);
+}
+
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, #0B3F6A 0%, #072b4a 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  color: #111827;
+}
+
+/* Sayfa içi yerleşim - dikey ortala */
+body{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+}
+
+/* Kart */
+.card{
+  width:100%;
+  max-width:520px;
+  background: var(--card-bg);
+  padding:36px 34px;
+  border-radius:14px;
+  box-shadow: 0 18px 40px rgba(2,6,23,0.35);
+  text-align:center;
+  transition: transform .18s ease, box-shadow .18s ease;
+  border: 1px solid rgba(11,63,106,0.06);
+}
+
+.card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 26px 60px rgba(2,6,23,0.45);
+}
+
+h1{
+  margin:0 0 10px 0;
+  font-size:28px;
+  color: var(--primary);
+  letter-spacing:0.2px;
+  line-height:1;
+  font-weight:700;
+}
+
+/* Bio */
+.bio{
+  margin:8px 0 20px 0;
+  color:#374151;
+  font-size:14px;
+  line-height:1.6;
+  min-height:52px; /* placeholder yüksekliği */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:6px 12px;
+  border-radius:8px;
+  background: linear-gradient(180deg, rgba(11,63,106,0.02), rgba(7,43,74,0.02));
+}
+
+/* Bağlantılar / düğmeler */
+.links{
+  margin-top:6px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items:stretch;
+}
+
+.links a{
+  display:inline-block;
+  text-decoration:none;
+  padding:11px 14px;
+  border-radius:10px;
+  background: var(--primary);
+  color: #fff;
+  font-weight:600;
+  transition: transform .12s ease, background .12s ease;
+  box-shadow: 0 6px 18px rgba(11,63,106,0.12);
+}
+
+.links a:hover{
+  transform: translateY(-3px);
+  background: var(--primary-700);
+}
+
+/* Footer kart altı notu */
+.footer{
+  margin-top:18px;
+  font-size:13px;
+  color: var(--muted);
+}
+
+/* Küçük ekran uyumu */
+@media (max-width:560px){
+  .card{
+    padding:26px;
+    border-radius:12px;
+  }
+  h1{ font-size:22px; }
+  .bio{ font-size:13px; min-height:44px; padding:8px; }
+  .links a{ padding:10px; font-size:15px; }
+}
+
+/* İsteğe bağlı: sayfaya ekleyeceğin bölümler (ankor hedefleri için) */
+.section{
+  width:100%;
+  max-width:920px;
+  margin:36px auto;
+  background:var(--card-bg);
+  padding:28px;
+  border-radius:12px;
+  box-shadow:0 12px 30px rgba(2,6,23,0.12);
+  color:#111827;
+}
+
+/* Eğer ileride "aktif" link vurgusu eklemek istersen */
+.links a.active{
+  outline: 3px solid rgba(18,90,148,0.12);
+}
+
+/* Küçük erişilebilirlik dokunuşu: odak stili */
+a:focus{
+  outline: 3px solid rgba(11,63,106,0.16);
+  outline-offset:3px;
+  border-radius:8px;
+}
