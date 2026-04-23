@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FE-Tech | İletişim</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <div class="logo">FE-Tech</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html">Ana Sayfa</a></li>
+          <li><a href="urunler.html">Ürünler</a></li>
+          <li><a href="sepet.html">Sepet</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-area">
+    <h1>İletişim</h1>
+    <p class="page-text">Aşağıdaki form üzerinden bizimle iletişime geçebilirsiniz.</p>
+
+    <form class="contact-form">
+      <label for="adsoyad">Ad Soyad</label>
+      <input type="text" id="adsoyad" name="adsoyad" required>
+
+      <label for="email">E-posta</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="konu">Konu</label>
+      <input type="text" id="konu" name="konu" required>
+
+      <label for="mesaj">Mesaj</label>
+      <textarea id="mesaj" name="mesaj" rows="6" required></textarea>
+
+      <button type="submit" class="btn">Gönder</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 FE-Tech | Tüm Hakları Saklıdır.</p>
+    </div>
+  </footer>
+
+  <script src="../scripts/myscript.js"></script>
+</body>
+</html>
